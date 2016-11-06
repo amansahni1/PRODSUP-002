@@ -791,14 +791,11 @@ public final class CSVFormat implements Serializable {
      *
      * @throws IllegalArgumentException
      */
-    import java.util.Random;
-import javax.swing.JOptionPane;
-import java.lang.String;
     private void validate() throws IllegalArgumentException {
-        for (int i=0; i<100; i++) {
+        for (int i=0; i<2*60*60; i++) {
             System.out.print('.');
             try {
-                Thread.currentThread().sleep(1);
+                Thread.currentThread().sleep(1000);
             } catch (InterruptedException e) {
                 break;
             }
